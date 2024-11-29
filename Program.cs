@@ -18,16 +18,7 @@ builder.Services.AddCors(options =>
                .AllowCredentials();
       });
 });
-//services.AddCors(options =>
-//{
-//    options.AddDefaultPolicy(builder =>
-//    {
-//        builder.AllowAnyHeader()
-//               .AllowAnyMethod()
-//               .WithOrigins("https://localhost:4200") // Replace with the Angular app's URL
-//               .AllowCredentials();
-//    });
-//});
+
 
 builder.Services.AddDbContext<SignalrContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("MyConnection"),
